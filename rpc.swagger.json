@@ -1,0 +1,57 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "HTTP gateway for GRPC service",
+    "version": "version not set"
+  },
+  "basePath": ":8081",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/version": {
+      "get": {
+        "operationId": "GetVersion",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/rpcVersion"
+            }
+          }
+        },
+        "tags": [
+          "GRPC"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "rpcMessage": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "rpcVersion": {
+      "type": "object",
+      "properties": {
+        "sem_ver": {
+          "type": "string"
+        },
+        "git_commit": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
