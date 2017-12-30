@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { TableListComponent } from './table-list/table-list.component';
+import { VersionComponent } from './version/version.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     UserProfileComponent,
-    TableListComponent
+    TableListComponent,
+    VersionComponent
 
   ],
   imports: [
