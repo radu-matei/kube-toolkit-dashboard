@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-version',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VersionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient) {
+    this.http.get("https://jsonplaceholder.typicode.com/posts/1").subscribe(data => {
+      console.log(data);
+    });
+   }
 
   ngOnInit() {
   }
 
-
-  getVersion(): void{
-    alert("ana are mere")
-  }
 }
