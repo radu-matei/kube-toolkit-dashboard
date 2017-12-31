@@ -83,7 +83,7 @@ export class GRPCService {
             'application/json'
         ];
 
-        return this.httpClient.get<RpcVersion>(`${this.basePath}/version`,
+        return this.httpClient.get<RpcVersion>(`${this.basePath}/api/version`,
             {
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
