@@ -10,7 +10,9 @@ import { VersionComponent } from './version/version.component';
 const routes: Routes =[
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'version',        component: VersionComponent },    
-    { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
+    { path: '',               redirectTo: 'dashboard', pathMatch: 'full' },
+    { path: 'ui',               redirectTo: 'dashboard', pathMatch: 'full' }
+    
 ];
 
 @NgModule({
