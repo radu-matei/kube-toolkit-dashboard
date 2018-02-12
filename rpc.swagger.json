@@ -16,6 +16,58 @@
     "application/json"
   ],
   "paths": {
+    "/api/get": {
+      "post": {
+        "operationId": "GetValue",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/rpcStateMessage"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/rpcStateMessage"
+            }
+          }
+        ],
+        "tags": [
+          "GRPC"
+        ]
+      }
+    },
+    "/api/put": {
+      "post": {
+        "operationId": "PutValue",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/rpcStateMessage"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/rpcStateMessage"
+            }
+          }
+        ],
+        "tags": [
+          "GRPC"
+        ]
+      }
+    },
     "/api/version": {
       "get": {
         "operationId": "GetVersion",
@@ -38,6 +90,17 @@
       "type": "object",
       "properties": {
         "message": {
+          "type": "string"
+        }
+      }
+    },
+    "rpcStateMessage": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
           "type": "string"
         }
       }
